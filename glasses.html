@@ -14,14 +14,14 @@
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <!-- <a-asset-item
-          id="glassesModel"
-          src="http://127.0.0.1:5000/boo/"
-        ></a-asset-item> -->
         <a-asset-item
           id="glassesModel"
-          src="http://127.0.0.1:5000/beep.gltf"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/face-tracking/assets/glasses/scene.gltf"
         ></a-asset-item>
+        <!-- <a-asset-item
+          id="glassesModel"
+          src="http://127.0.0.1:5000/beep.gltf"
+        ></a-asset-item> -->
         <a-asset-item
           id="headModel"
           src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/face-tracking/assets/sparkar/headOccluder.glb"
@@ -38,11 +38,19 @@
           src="#headModel"
         ></a-gltf-model>
       </a-entity>
-      <a-entity mindar-face-target="anchorIndex: 168">
+      <!-- <a-entity mindar-face-target="anchorIndex: 168">
         <a-gltf-model
           rotation="0 0 0"
           position="0 0 0"
           scale="0.6 0.6 0.6"
+          src="#glassesModel"
+        ></a-gltf-model>
+      </a-entity> -->
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0 0 0"
+          scale="0.01 0.01 0.01"
           src="#glassesModel"
         ></a-gltf-model>
       </a-entity>
