@@ -1,43 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS - Web Ar</title>
   </head>
   <body>
-    <a-assets>
-      <img
-        id="card"
-        src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.png"
-      />
-      <a-asset-item
-        id="avatarModel"
-        src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/softmind/scene.gltf"
-      ></a-asset-item>
-    </a-assets>
-    <a-scene
-      mindar-image="imageTargetSrc: ./targets.mind;"
-      vr-mode-ui="enabled: false"
-      device-orientation-permission-ui="enabled: false"
-    >
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane
-          src="#card"
-          position="0 0 0"
-          height="0.552"
-          width="1"
-          rotation="0 0 0"
-        ></a-plane>
-        <a-gltf-model
-          rotation="0 0 0 "
-          position="0 0 0.1"
-          scale="0.005 0.005 0.005"
-          src="#avatarModel"
-          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-        ></a-gltf-model>
-      </a-entity>
-    </a-scene>
+    <center>
+      <h1>Welcome to Computer Science Society Web Ar Demonstration</h1>
+    </center>
+
+    <section id="content">
+      <center>
+        <p>
+          Below are links to various AR related applications for you to test,
+          and all you need is your phone camera!
+        </p>
+      </center>
+      <div class="flex">
+        <div class="flex-column">
+          <div class="flex-item">
+            <h2>Face Tracking AR</h2>
+          </div>
+          <div class="flex-item">
+            <a href="./nose.html">Simple</a>
+          </div>
+          <div class="flex-item">
+            <a href="./glasses.html">Glasses</a>
+          </div>
+        </div>
+        <div class="flex-column">
+          <div class="flex-item">
+            <h2>Image AR</h2>
+          </div>
+          <div class="flex-item">
+            <a href="./parade.html">Parade</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
